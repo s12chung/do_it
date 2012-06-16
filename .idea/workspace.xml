@@ -4,7 +4,6 @@
     <list default="true" id="ea105363-2f7d-47f1-9558-1751ea6e38fa" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/home_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/home_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/intro.html.erb" afterPath="$PROJECT_DIR$/app/views/home/intro.html.erb" />
     </list>
     <ignored path="do_it.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -79,7 +78,7 @@
       <file leaf-file-name="home_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/home_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="24" selection-start="1337" selection-end="1337" vertical-scroll-proportion="0.8352668">
+            <state line="27" column="51" selection-start="991" selection-end="991" vertical-scroll-proportion="0.48723897">
               <folding />
             </state>
           </provider>
@@ -607,7 +606,7 @@
     <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
     <option name="DEFAULT_PATCH_EXTENSION" value="patch" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="big commit again (late)" />
+    <option name="LAST_COMMIT_MESSAGE" value="final commit (late)" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -624,6 +623,7 @@
     <MESSAGE value="commit" />
     <MESSAGE value="big commit" />
     <MESSAGE value="big commit again (late)" />
+    <MESSAGE value="final commit (late)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -718,7 +718,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/home_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="24" selection-start="1337" selection-end="1337" vertical-scroll-proportion="0.8352668">
+        <state line="27" column="51" selection-start="991" selection-end="991" vertical-scroll-proportion="0.48723897">
           <folding />
         </state>
       </provider>
