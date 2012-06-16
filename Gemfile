@@ -17,6 +17,8 @@ group :assets do
   gem 'twitter-bootstrap-rails'
 end
 
+gem 'facebook_oauth'
+
 gem 'jquery-rails'
 
 # To use ActiveModel has_secure_password
