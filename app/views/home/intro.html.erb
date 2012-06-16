@@ -21,12 +21,12 @@
   <h1 class="header center">This is you.</h1>
   <% @photos.each do |photo| %>
       <div class="photo center" style="display: none;">
-        <%= image_tag photo[:src], :class => "top_spacer2" %>
+        <%= image_tag photo[:src], :class => "top_spacer4" %>
       </div>
   <% end %>
 
-  <div id="will" style="display: none;" class="center top_spacer2">
-    <div class="clearfix">
+  <div id="will" style="display: none;" class="center">
+    <div class="clearfix top_spacer4">
       <%= image_tag @pp_small, :class => "float_left" %>
       <h1 class="float_left left_spacer2">I will....</h1>
       <input type="text" style="display: none;" class="input-xlarge left_spacer2 float_left">

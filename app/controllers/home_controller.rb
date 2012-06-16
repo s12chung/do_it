@@ -19,16 +19,19 @@ class HomeController < ApplicationController
 
     session[:access_token] = response.body.split("&").first.sub("access_token=", "")
 
-    #@photos = []
-    #photo_request "https://graph.facebook.com/me/photos?access_token=#{session[:access_token]}&limit=1000"
-    #@photos.sort_by do |photo|
-    #  photo[:score]
-    #end
+    @photos = []
+    photo_request "https://graph.facebook.com/me/photos?access_token=#{session[:access_token]}&limit=1000"
+    @photos = [@photos.first,
+               @photos[(@photos.size() * 1/5).floor + 1],
+               @photos[(@photos.size() * 2/5).floor + 1],
+               @photos[(@photos.size() * 3/5).floor + 1],
+               @photos[(@photos.size() * 4/5).floor + 1],
+               @photos.last]
+    @photos.reverse!
 
     @profile_picture_src = profile_picture_request
-    @photos = [{src: @profile_picture_src}] * 20
 
-    @photos = [{src: @profile_picture_src}] + @photos[0..5]
+    @photos = [{src: @profile_picture_src}] + @photos + [{src: @profile_picture_src}]
     @pp_small = "https://graph.facebook.com/me/picture?type=square&access_token=#{session[:access_token]}"
   end
 
