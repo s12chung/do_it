@@ -8,3 +8,27 @@
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require_tree .
+
+
+function fade_elements($elements, index) {
+    if (index < $elements.size()) {
+        var $element = $elements.eq(index);
+        $element.fadeIn(1000);
+
+        var $header = $('h1.header');
+        if (index == 2) {
+            $header.html("And you've done a lot..");
+            $header.humanTypist({ 'speed': 'secretary' });
+        }
+        if (index == $elements.size() - 1) {
+            $('h1.header').html("What else will you do??");
+            $header.humanTypist({ 'speed': 'secretary' });
+        }
+        setTimeout(function() {
+            $element.fadeIn(1000, function() {
+                $element.hide();
+                fade_elements($elements, index + 1);
+            });
+        }, 3000);
+    }
+}

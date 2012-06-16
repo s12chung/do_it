@@ -1,0 +1,16 @@
+<% content_for :head do %>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            fade_elements($('.photo'), 0);
+        });
+    </script>
+<% end %>
+
+<div class="center_container">
+  <h1 class="header center">This is you.</h1>
+  <% @photos.each do |photo| %>
+      <div class="photo center" style="display: none;">
+        <%= image_tag photo[:src], :class => "top_spacer2" %>
+      </div>
+  <% end %>
+</div>
