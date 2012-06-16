@@ -22,10 +22,10 @@ class HomeController < ApplicationController
     @photos = []
     photo_request "https://graph.facebook.com/me/photos?access_token=#{session[:access_token]}&limit=1000"
     @photos = [@photos.first,
-               @photos[(@photos.size() * 1/5).floor],
-               @photos[(@photos.size() * 2/5).floor],
-               @photos[(@photos.size() * 3/5).floor],
-               @photos[(@photos.size() * 4/5).floor],
+               @photos[(@photos.size() * 1/5).floor + 1],
+               @photos[(@photos.size() * 2/5).floor + 1],
+               @photos[(@photos.size() * 3/5).floor + 1],
+               @photos[(@photos.size() * 4/5).floor + 1],
                @photos.last]
     @photos.reverse!
 
