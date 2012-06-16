@@ -9,7 +9,8 @@ class HomeController < ApplicationController
     session[:code] = params[:code]
 
     client_id = Rails.env == "development" ? 119934318017902 : 383285121729602
-    path = "/oauth/access_token?client_id=#{client_id}&redirect_uri=#{intro_url}&client_secret=d6a6829389885c0ce7b71551963f1130&code=#{session[:code]}"
+    secret = Rails.env == "development" ? "d6a6829389885c0ce7b71551963f1130" : "22de659bfc2fc2f91624c8c72132e866"
+    path = "/oauth/access_token?client_id=#{client_id}&redirect_uri=#{intro_url}&client_secret=#{secret}&code=#{session[:code]}"
 
     http = Net::HTTP.new "graph.facebook.com", 443
     http.use_ssl = true
