@@ -28,7 +28,8 @@ class HomeController < ApplicationController
     @profile_picture_src = profile_picture_request
     @photos = [{src: @profile_picture_src}] * 20
 
-    @photos = [{src: @profile_picture_src}] + @photos[0..5] + [{src: "http://3.bp.blogspot.com/-IKtbdub98tE/T8wQ1zwDQFI/AAAAAAAABKU/Af5umkG968o/s400/County_General_Toronto.jpg"}]
+    @photos = [{src: @profile_picture_src}] + @photos[0..5]
+    @pp_small = "https://graph.facebook.com/me/picture?type=square&access_token=#{session[:access_token]}"
   end
 
   def photo_request(url)

@@ -26,7 +26,12 @@ function fade_elements($elements, index) {
         }
         setTimeout(function() {
             $element.fadeIn(1000, function() {
+
                 $element.hide();
+
+                if (index + 1 < $elements.size()) {
+
+                }
                 fade_elements($elements, index + 1);
             });
         }, 3000);

@@ -77,3 +77,26 @@ Alignment
 .v_center2 { position: relative; top: -50% }
 .v_center2[class] { position: static; top: auto; }
 .height100 { height: 100% }
+
+.clearfix:after {
+	clear: both;
+	content: ' ';
+	display: block;
+	font-size: 0;
+	line-height: 0;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+
+.clearfix {
+	display: inline-block;
+}
+
+* html .clearfix {
+	height: 1%;
+}
+
+.clearfix {
+	display: block;
+}
