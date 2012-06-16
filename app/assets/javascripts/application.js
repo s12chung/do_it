@@ -26,11 +26,21 @@ function fade_elements($elements, index) {
         }
         setTimeout(function() {
             $element.fadeIn(1000, function() {
+                if (index + 1 == $elements.size()) {
+                    setTimeout(function() {
+                        $element.hide();
+                        $('#will').show();
+                        $('#will').find('h1').humanTypist({ 'speed': 'secretary' });
+                        setTimeout(function() {
+                            $('#will').find('h1').html("I will");
+                            $('#will input').show();
+                            $("#will input").focus();
+                        }, 3000);
+                    }, 5000);
 
-                $element.hide();
-
-                if (index + 1 < $elements.size()) {
-
+                }
+                else {
+                    $element.hide();
                 }
                 fade_elements($elements, index + 1);
             });

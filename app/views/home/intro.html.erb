@@ -2,6 +2,17 @@
     <script type="text/javascript">
         $(document).ready(function() {
             fade_elements($('.photo'), 0);
+
+            $("#will input").keydown(function(event){
+                if( event.keyCode == 13 ) {
+                    var $clone = $('.todo').first().clone();
+                    $clone.html($('#will input').val());
+                    $('.the_list').prepend($clone);
+                    $clone.show();
+
+                    $('#will input').val('');
+                }
+            });
         });
     </script>
 <% end %>
@@ -14,11 +25,16 @@
       </div>
   <% end %>
 
-  <div style="display: none;" class="center">
+  <div id="will" style="display: none;" class="center top_spacer2">
     <div class="clearfix">
-      <h1 class="float_left">I will...</h1><form class="well form-search">
-      <input type="text" class="input-xlarge left_spacer2 float_left"></form>
+      <%= image_tag @pp_small, :class => "float_left" %>
+      <h1 class="float_left left_spacer2">I will....</h1>
+      <input type="text" style="display: none;" class="input-xlarge left_spacer2 float_left">
     </div>
   </div>
 
+  <h1 class="todo" style="display: none;"></h1>
+  <div class="the_list">
+
+  </div>
 </div>
